@@ -1,4 +1,4 @@
 grunt-favicon
 =============
 
-Generate favicons via imagick.
+Generate site favicons via imagick.

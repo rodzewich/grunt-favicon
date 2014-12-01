@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             tasks: {
                 files: [{
                     expand : false,
-                    dest   : "tasks/tsc.js",
+                    dest   : "tasks/favicon.js",
                     src    : "src/*.js"
                 }]
             }

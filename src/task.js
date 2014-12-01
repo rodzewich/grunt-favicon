@@ -332,6 +332,7 @@ module.exports = function (grunt) {
                             grunt.log.writeln(temp.join("\n").magenta);
                             next();
                         } else {
+                            displayErrorContent(content.join(""));
                             displayErrorContent("Imagemagick not installed.");
                             grunt.fail.warn("Something went wrong.");
                             done(false);

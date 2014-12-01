@@ -1,5 +1,5 @@
 /*jslint */
-/*global module, require, process, setTimeout */
+/*global module */
 
 module.exports = function (grunt) {
 

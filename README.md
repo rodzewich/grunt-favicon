@@ -19,7 +19,7 @@ Generate site favicons via imagick.
 ``` javascript
 grunt.initConfig({
     favicon: {
-        // plugin global options
+        // plugin general options
         options: {},
         tasks: {
             // task options

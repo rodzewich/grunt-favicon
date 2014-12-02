@@ -4,6 +4,8 @@
 
 Generate site favicons via imagick.
 
+# windows not supported !!!
+
 ## Options
 
 ### options.sizeDepth

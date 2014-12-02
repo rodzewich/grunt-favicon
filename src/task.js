@@ -53,11 +53,11 @@ module.exports = function (grunt) {
                 temp;
             if (typeOf(fileMode) === "undefined") {
                 opt = getOptions();
-                temp = String(opt.fmode || "");
-                if (typeOf(opt.fmode) === "undefined") {
+                temp = String(opt.fileMode || "");
+                if (typeOf(opt.fileMode) === "undefined") {
                     temp = "644";
                 } else if (!/^[0-7]{3,3}$/.test(temp)) {
-                    throw new Error("Incorrect \"fmode\" option.");
+                    throw new Error("Incorrect \"fileMode\" option.");
                 }
                 fileMode = parseInt(temp, 8);
             }
@@ -68,11 +68,11 @@ module.exports = function (grunt) {
                 temp;
             if (typeOf(dirMode) === "undefined") {
                 opt = getOptions();
-                temp = String(opt.dmode || "");
-                if (typeOf(opt.dmode) === "undefined") {
+                temp = String(opt.dirMode || "");
+                if (typeOf(opt.dirMode) === "undefined") {
                     temp = "755";
                 } else if (!/^[0-7]{3,3}$/.test(temp)) {
-                    throw new Error("Incorrect \"dmode\" option.");
+                    throw new Error("Incorrect \"dirMode\" option.");
                 }
                 dirMode = parseInt(temp, 8);
             }
@@ -186,7 +186,7 @@ module.exports = function (grunt) {
             var expand,
                 source = item.src[0],
                 dest   = String(item.dest || ""),
-                args   = [],
+                args   = ["convert"],
                 errors = [],
                 version;
             function hasExpand() {
@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                         args.push("-alpha", "off");
                         args.push("-colors", getColorDepth());
                         args.push(dest);
-                        version = spawn("convert", args);
+                        version = spawn("/usr/bin/env", args);
                         version.stderr.on("data", function (data) {
                             errors.push(data.toString("utf8"));
                         });
@@ -309,7 +309,7 @@ module.exports = function (grunt) {
             deferred([
                 // show version
                 function (next) {
-                    var convert = spawn("convert", ["-version"]),
+                    var convert = spawn("/usr/bin/env", ["convert", "-version"]),
                         content = [];
                     convert.stdout.on("data", function (data) {
                         content.push(data.toString("utf8"));
@@ -334,6 +334,11 @@ module.exports = function (grunt) {
                         } else {
                             displayErrorContent(content.join(""));
                             displayErrorContent("Imagemagick not installed.");
+                            grunt.log.writeln(">>".yellow + " The program \"convert\" can be found in the following packages:");
+                            grunt.log.writeln(">>".yellow + " Try (debian/ubuntu/mint): sudo apt-get install imagemagick");
+                            grunt.log.writeln(">>".yellow + " Try (redhat/centos/fedora): sudo yum install ImageMagick");
+                            grunt.log.writeln(">>".yellow + " Try (gentoo): sudo emerge media-gfx/imagemagick");
+                            grunt.log.writeln(">>".yellow + " Try (macos): sudo port install ImageMagick");
                             grunt.fail.warn("Something went wrong.");
                             done(false);
                         }
@@ -344,8 +349,8 @@ module.exports = function (grunt) {
                     grunt.log.writeflags({
                         sizeDepth  : getSizeDepthOption(),
                         colorDepth : getColorDepthOption(),
-                        fmode      : getFileModeOption().toString(8),
-                        dmode      : getDirModeOption().toString(8)
+                        fileMode   : getFileModeOption().toString(8),
+                        dirMode    : getDirModeOption().toString(8)
                     }, "options");
                     next();
                 },

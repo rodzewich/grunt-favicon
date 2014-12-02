@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
         uglify: {
             options: {
-                banner: grunt.file.read("banner.txt")
+                banner: grunt.file.read("src/banner.txt")
             },
             tasks: {
                 files: [{

@@ -12,9 +12,9 @@ Generate site favicons via imagick.
 
 ### options.colorDepth
 
-### options.fmode
+### options.fileMode
 
-### options.dmode
+### options.dirMode
 
 ## Examples
 

@@ -71,12 +71,28 @@ module.exports = function (grunt) {
         function displayError(error) {
             grunt.log.writeln(">> ".red + String(error.name + ":").yellow + " " + error.message);
         }
-        function displayErrorContent(content) {
-            content.split(/(?:\n|\r)+/).forEach(function (item) {
+        function displayContent(string) {
+            string.split(/(?:\n|\r)+/).forEach(function (item) {
                 item = item.replace(/\s+$/, "");
+                item = item.replace(/\s+/, " ");
                 if (item) {
                     while (item) {
-                        grunt.log.write(">> ".red);
+                        item = item.replace(/^\s+/, "");
+                        grunt.log.write(">>".green + " ");
+                        grunt.log.writeln(item.substr(0, columns - 3));
+                        item = item.substr(columns - 3);
+                    }
+                }
+            });
+        }
+        function displayErrorContent(string) {
+            string.split(/(?:\n|\r)+/).forEach(function (item) {
+                item = item.replace(/\s+$/, "");
+                item = item.replace(/\s+/, " ");
+                if (item) {
+                    while (item) {
+                        item = item.replace(/^\s+/, "");
+                        grunt.log.write(">>".red + " ");
                         grunt.log.writeln(item.substr(0, columns - 3));
                         item = item.substr(columns - 3);
                     }
@@ -192,7 +208,8 @@ module.exports = function (grunt) {
                         })
                     },
                     function (next) {
-                        var depth = getCountOfImagesOption();
+                        var depth = getCountOfImagesOption(),
+                            command;
                         args.push(source);
                         args.push("-bordercolor", "white", "-border", "0");
                         args.push("(", "-clone", "0", "-resize", "16x16", ")");
@@ -215,14 +232,14 @@ module.exports = function (grunt) {
                         args.push("-alpha", "off");
                         args.push("-colors", getColorDepth());
                         args.push(dest);
-                        version = spawn("/usr/bin/env", args);
-                        version.stderr.on("data", function (data) {
+                        command = spawn("/usr/bin/env", args);
+                        command.stderr.on("data", function (data) {
                             errors.push(data.toString("utf8"));
                         });
-                        version.stdout.on("data", function (data) {
+                        command.stdout.on("data", function (data) {
                             errors.push(data.toString("utf8"));
                         });
-                        version.on("close", function (code) {
+                        command.on("close", function (code) {
                             if (code !== 0) {
                                 displayErrorContent(errors.join(""));
                                 grunt.fail.warn("Something went wrong.");
@@ -266,18 +283,18 @@ module.exports = function (grunt) {
             deferred([
                 // show version
                 function (next) {
-                    var convert = spawn("convert", ["-version"]),
+                    var command = spawn("convert", ["-version"]),
                         content = [];
-                    convert.on("error", function (error) {
+                    command.on("error", function (error) {
                         displayError(error);
                     });
-                    convert.stdout.on("data", function (data) {
+                    command.stdout.on("data", function (data) {
                         content.push(data.toString("utf8"));
                     });
-                    convert.stderr.on("data", function (data) {
+                    command.stderr.on("data", function (data) {
                         content.push(data.toString("utf8"));
                     });
-                    convert.on("close", function (code) {
+                    command.on("close", function (code) {
                         var temp = [];
                         if (code === 0) {
                             content.join("").split("\n").forEach(function (element) {
@@ -289,7 +306,7 @@ module.exports = function (grunt) {
                                     temp.push(element);
                                 }
                             });
-                            grunt.log.writeln(temp.join("\n").magenta);
+                            displayContent(temp.join("\n"));
                             next();
                         } else {
                             displayErrorContent(content.join(""));

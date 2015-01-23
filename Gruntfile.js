@@ -1,6 +1,8 @@
 /*jslint */
 /*global module */
 
+// todo: implement tests info build process
+
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks("grunt-contrib-uglify");

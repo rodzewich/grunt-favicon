@@ -5,6 +5,13 @@
 
 Generate site favicons via [ImageMagick](http://www.imagemagick.org/).
 
+**WARNING:** This extension require global install ImageMagick.
+* For Windows install go to the [ImageMagick](http://www.imagemagick.org/).
+* For Debian, Ubuntu or Mint run on command line: sudo apt-get install imagemagick
+* For Redhut, Centos or Fedora run on command line: sudo yum install ImageMagick
+* For Gentoo run on command line: sudo emerge media-gfx/imagemagick
+* For MacOS run on command line: sudo port install ImageMagick
+
 ## Options
 
 ### options.countOfImages

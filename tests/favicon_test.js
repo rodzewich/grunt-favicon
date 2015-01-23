@@ -33,4 +33,5 @@ exports.favicon = {
     options_default: function (test) {
 
     }
+
 };

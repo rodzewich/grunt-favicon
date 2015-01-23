@@ -9,7 +9,7 @@ Generate site favicons via [ImageMagick](http://www.imagemagick.org/).
 
 ### options.countOfImages
 
-* **type** <number>
+* **type** &lt;number&gt;
 * **default** 6
 
 Count of images into icon.

@@ -1,7 +1,4 @@
-/*jslint */
 /*global module */
-
-// todo: implement tests info build process
 
 module.exports = function (grunt) {
 
@@ -26,7 +23,7 @@ module.exports = function (grunt) {
             options: {
                 banner: grunt.file.read("src/banner.txt")
             },
-            tasks: {
+            compile: {
                 files: [{
                     expand : false,
                     dest   : "tasks/favicon.js",
@@ -52,6 +49,5 @@ module.exports = function (grunt) {
     grunt.registerTask("default", "Build package.", ["test", "compile"]);
     grunt.registerTask("test", "Test project.", ["favicon", "nodeunit", "clean:tests"]);
     grunt.registerTask("compile", "Compile project.", ["jshint:all", "uglify:compile"]);
-
 
 };

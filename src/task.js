@@ -1,4 +1,3 @@
-/*jslint */
 /*global module, require, process */
 
 var spawn   = require("child_process").spawn,
@@ -207,7 +206,7 @@ module.exports = function (grunt) {
                             } else {
                                 next();
                             }
-                        })
+                        });
                     },
                     function (next) {
                         var depth = getCountOfImagesOption(),

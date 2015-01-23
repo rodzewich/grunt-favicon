@@ -1,20 +1,25 @@
 # grunt-favicon [![NPM version](https://badge.fury.io/js/grunt-favicon.png)](http://badge.fury.io/js/grunt-favicon) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-[![Npm Downloads](https://nodei.co/npm/grunt-favicon.png?downloads=true&stars=true)](https://www.npmjs.org/package/grunt-favicon)
+[![Npm Downloads](https://nodei.co/npm/grunt-favicon.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.org/package/grunt-favicon)
+[![Npm Downloads](https://nodei.co/npm-dl/grunt-favicon.png?height=3&months=3)](https://www.npmjs.org/package/grunt-favicon)
 
-Generate site favicons via imagick.
-
-# windows not supported !!!
+Generate site favicons via [ImageMagick](http://www.imagemagick.org/).
 
 ## Options
 
-### options.sizeDepth
+### options.countOfImages
+
+* **type** <number>
+* **default** 6
+
+Count of images into icon.
 
 ### options.colorDepth
 
-### options.fileMode
+* **type** <number>
+* **default** 8
 
-### options.dirMode
+Count of bits for color.
 
 ## Examples
 

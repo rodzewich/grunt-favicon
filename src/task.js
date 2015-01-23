@@ -16,69 +16,15 @@ process.stdout.on("resize", function () {
 module.exports = function (grunt) {
     "use strict";
 
-    grunt.registerMultiTask("favicon", "description", function () {
+    grunt.registerMultiTask("favicon", "Generate site favicons via ImageMagick.", function () {
         var self    = this,
             files   = self.files,
             length  = files.length,
             done    = this.async(),
             time1   = Number(new Date()),
-            fileMode,
-            dirMode,
             options,
-            sizeDepth,
+            countOfImages,
             colorDepth;
-        function displayError(error) {
-            grunt.log.writeln(">> ".red + String(error.name + ":").yellow + " " + error.message);
-        }
-        function displayErrorContent(content) {
-            content.split(/(?:\n|\r)+/).forEach(function (item) {
-                item = item.replace(/\s+$/, "");
-                if (item) {
-                    while (item) {
-                        grunt.log.write(">> ".red);
-                        grunt.log.writeln(item.substr(0, columns - 3));
-                        item = item.substr(columns - 3);
-                    }
-                }
-            });
-        }
-        function getOptions() {
-            if (typeof options === "undefined") {
-                options = self.options() || {};
-            }
-            return options;
-        }
-        function getFileModeOption() {
-            var opt,
-                temp;
-            if (typeOf(fileMode) === "undefined") {
-                opt = getOptions();
-                temp = String(opt.fileMode || "");
-                if (typeOf(opt.fileMode) === "undefined") {
-                    temp = "644";
-                } else if (!/^[0-7]{3,3}$/.test(temp)) {
-                    throw new Error("Incorrect \"fileMode\" option.");
-                }
-                fileMode = parseInt(temp, 8);
-            }
-            return fileMode;
-        }
-        function getDirModeOption() {
-            var opt,
-                temp;
-            if (typeOf(dirMode) === "undefined") {
-                opt = getOptions();
-                temp = String(opt.dirMode || "");
-                if (typeOf(opt.dirMode) === "undefined") {
-                    temp = "755";
-                } else if (!/^[0-7]{3,3}$/.test(temp)) {
-                    throw new Error("Incorrect \"dirMode\" option.");
-                }
-                dirMode = parseInt(temp, 8);
-            }
-            return dirMode;
-        }
-
         function typeOf(value) {
             var type  = String(Object.prototype.toString.call(value) || '').slice(8, -1) || 'Object',
                 types = ['Arguments', 'Array', 'Boolean', 'Date', 'Error', 'Function', 'Null', 'Number', 'Object', 'String', 'Undefined'];
@@ -114,13 +60,34 @@ module.exports = function (grunt) {
                         if (error) {
                             callback(error);
                         } else {
-                            fs.mkdir(dir, getDirModeOption(), function (error) {
+                            fs.mkdir(dir, function (error) {
                                 callback(error || null);
                             });
                         }
                     });
                 }
             ]);
+        }
+        function displayError(error) {
+            grunt.log.writeln(">> ".red + String(error.name + ":").yellow + " " + error.message);
+        }
+        function displayErrorContent(content) {
+            content.split(/(?:\n|\r)+/).forEach(function (item) {
+                item = item.replace(/\s+$/, "");
+                if (item) {
+                    while (item) {
+                        grunt.log.write(">> ".red);
+                        grunt.log.writeln(item.substr(0, columns - 3));
+                        item = item.substr(columns - 3);
+                    }
+                }
+            });
+        }
+        function getOptions() {
+            if (typeof options === "undefined") {
+                options = self.options() || {};
+            }
+            return options;
         }
         function getColorDepthOption() {
             var options;
@@ -143,23 +110,23 @@ module.exports = function (grunt) {
         function getColorDepth() {
             return String(Math.pow(2, getColorDepthOption()));
         }
-        function getSizeDepthOption() {
+        function getCountOfImagesOption() {
             var options;
-            if (typeof sizeDepth === "undefined") {
+            if (typeof countOfImages === "undefined") {
                 options = getOptions();
-                if (typeof options.sizeDepth === "undefined") {
+                if (typeof options.countOfImages === "undefined") {
                     // default value
-                    sizeDepth = 4;
+                    countOfImages = 4;
                 } else {
-                    sizeDepth = parseFloat(String(options.sizeDepth));
-                    if ([1, 2, 3, 4, 5, 6].indexOf(sizeDepth) === -1) {
-                        sizeDepth = 8;
-                        throw new Error("Incorrect \"sizeDepth\" option, must be \"1\", \"2\", \"3\", \"4\", \"5\" or \"6\".");
+                    countOfImages = parseFloat(String(options.countOfImages));
+                    if ([1, 2, 3, 4, 5, 6].indexOf(countOfImages) === -1) {
+                        countOfImages = 8;
+                        throw new Error("Incorrect \"countOfImages\" option, must be \"1\", \"2\", \"3\", \"4\", \"5\" or \"6\".");
                     }
 
                 }
             }
-            return sizeDepth;
+            return countOfImages;
         }
         function getFileSize(value) {
             var suffix = ["B", "K", "M", "G", "T"],
@@ -225,7 +192,7 @@ module.exports = function (grunt) {
                         })
                     },
                     function (next) {
-                        var depth = getSizeDepthOption();
+                        var depth = getCountOfImagesOption();
                         args.push(source);
                         args.push("-bordercolor", "white", "-border", "0");
                         args.push("(", "-clone", "0", "-resize", "16x16", ")");
@@ -266,16 +233,6 @@ module.exports = function (grunt) {
                         });
                     },
                     function (next) {
-                        fs.chmod(dest, getFileModeOption(), function (error) {
-                            if (error) {
-                                displayError(error);
-                                done(false);
-                            } else {
-                                next();
-                            }
-                        });
-                    },
-                    function (next) {
                         fs.stat(dest, function (error, result) {
                             if (error) {
                                 displayError(error);
@@ -309,8 +266,11 @@ module.exports = function (grunt) {
             deferred([
                 // show version
                 function (next) {
-                    var convert = spawn("/usr/bin/env", ["convert", "-version"]),
+                    var convert = spawn("convert", ["-version"]),
                         content = [];
+                    convert.on("error", function (error) {
+                        displayError(error);
+                    });
                     convert.stdout.on("data", function (data) {
                         content.push(data.toString("utf8"));
                     });
@@ -333,7 +293,7 @@ module.exports = function (grunt) {
                             next();
                         } else {
                             displayErrorContent(content.join(""));
-                            displayErrorContent("Imagemagick not installed.");
+                            displayErrorContent("Maybe Imagemagick not installed.");
                             grunt.log.writeln(">>".yellow + " The program \"convert\" can be found in the following packages:");
                             grunt.log.writeln(">>".yellow + " Try (debian/ubuntu/mint): sudo apt-get install imagemagick");
                             grunt.log.writeln(">>".yellow + " Try (redhat/centos/fedora): sudo yum install ImageMagick");
@@ -347,10 +307,8 @@ module.exports = function (grunt) {
                 // show options
                 function (next) {
                     grunt.log.writeflags({
-                        sizeDepth  : getSizeDepthOption(),
-                        colorDepth : getColorDepthOption(),
-                        fileMode   : getFileModeOption().toString(8),
-                        dirMode    : getDirModeOption().toString(8)
+                        colorDepth    : getColorDepthOption(),
+                        countOfImages : getCountOfImagesOption()
                     }, "options");
                     next();
                 },

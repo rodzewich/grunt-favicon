@@ -16,7 +16,7 @@ Count of images into icon.
 
 ### options.colorDepth
 
-* **type** <number>
+* **type** &lt;number&gt;
 * **default** 8
 
 Count of bits for color.

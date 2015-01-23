@@ -49,6 +49,9 @@ module.exports = function (grunt) {
     // Actually load this plugin's task(s).
     grunt.loadTasks('src');
 
-    grunt.registerTask("default", "Build package.", ["uglify:tasks"]);
+    grunt.registerTask("default", "Build package.", ["test", "compile"]);
+    grunt.registerTask("test", "Test project.", ["favicon", "nodeunit", "clean:tests"]);
+    grunt.registerTask("compile", "Compile project.", ["jshint:all", "uglify:compile"]);
+
 
 };

@@ -28,16 +28,22 @@ Count of images into icon.
 
 Count of bits for color.
 
-## Examples
+## Example
 
 ``` javascript
 grunt.initConfig({
     favicon: {
-        // general options
-        options: {},
+        options: {
+            // Icons contains 3 images
+            // (16x16, 32x32, 48x48)
+            countOfImages: 3,
+            // for 256 colors, is max value
+            colorDepth: 8
+        },
         tasks: {
-            // task options
-            options: {},
+            options: {
+                // override options if needed
+            },
             files: [{
                 expand : true,
                 cwd    : "src",

@@ -7,6 +7,8 @@ var spawn   = require("child_process").spawn,
     path    = require("path"),
     fs      = require("fs");
 
+// todo: implement options.command
+
 process.stdout.on("resize", function () {
     "use strict";
     rows    = process.stdout.rows;

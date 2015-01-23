@@ -5,6 +5,18 @@
 
 Generate site favicons via [ImageMagick](http://www.imagemagick.org/).
 
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a Gruntfile as well as install and use [Grunt](http://gruntjs.com/) plugins. Once you're familiar with that process, you may install this plugin with this command:
+
+``` shell
+npm install grunt-favicon --save-dev
+```
+
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of javascript:
+
+``` javascript
+grunt.loadNpmTasks("grunt-favicon");
+```
+
 **WARNING:** This extension require global install ImageMagick.
 * For Windows go to the [ImageMagick](http://www.imagemagick.org/) and download installer.
 * For Debian, Ubuntu or Mint run on command line: sudo apt-get install imagemagick

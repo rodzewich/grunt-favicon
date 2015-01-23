@@ -38,7 +38,7 @@ Count of images into icon.
 * **type** &lt;number&gt;
 * **default** 8
 
-Count of bits (color depth) for color.
+Count of bits for color.
 
 ## Example
 

@@ -51,7 +51,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -81,7 +81,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -111,7 +111,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -141,7 +141,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -171,7 +171,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -201,7 +201,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=8]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -231,7 +231,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -261,7 +261,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -291,7 +291,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -321,7 +321,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -351,7 +351,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -381,7 +381,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=7]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -411,7 +411,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -441,7 +441,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -471,7 +471,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -501,7 +501,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -531,7 +531,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -561,7 +561,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=6]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -591,7 +591,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -621,7 +621,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -651,7 +651,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -681,7 +681,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -711,7 +711,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -741,7 +741,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=5]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -771,7 +771,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -801,7 +801,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -831,7 +831,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -861,7 +861,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -891,7 +891,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -921,7 +921,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=4]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -951,7 +951,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -981,7 +981,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1011,7 +1011,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1041,7 +1041,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1071,7 +1071,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1101,7 +1101,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=3]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1131,7 +1131,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1161,7 +1161,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1191,7 +1191,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1221,7 +1221,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1251,7 +1251,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1281,7 +1281,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=2]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1311,7 +1311,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=6,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1341,7 +1341,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=5,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1371,7 +1371,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=4,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1401,7 +1401,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=3,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1431,7 +1431,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=2,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));
@@ -1461,7 +1461,7 @@ exports.favicon = {
                 ["*", "**/*"]
             ).sort();
         test.expect(expected.length + 1);
-        test.deepEqual(expected, dest, "Checking file names in build [version=1.3,target=es5]");
+        test.deepEqual(expected, dest, "Checking file names in build [countOfImages=1,colorDepth=1]");
         expected.forEach(function (filename) {
             var expected = grunt.file.read(path.join("tests/expected", name, filename)),
                 dest = grunt.file.read(path.join("tests/dest", name, filename));

@@ -10,7 +10,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -25,7 +25,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -40,7 +40,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -55,7 +55,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -70,7 +70,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -85,7 +85,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth8",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -100,7 +100,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -115,7 +115,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -130,7 +130,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -145,7 +145,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -160,7 +160,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -175,7 +175,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth7",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -190,7 +190,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -205,7 +205,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -220,7 +220,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -235,7 +235,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -250,7 +250,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -265,7 +265,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth6",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -280,7 +280,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -295,7 +295,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -310,7 +310,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -325,7 +325,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -340,7 +340,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -355,7 +355,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth5",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -370,7 +370,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -385,7 +385,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -400,7 +400,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -415,7 +415,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -430,7 +430,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -445,7 +445,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth4",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -460,7 +460,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -475,7 +475,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -490,7 +490,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -505,7 +505,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -520,7 +520,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -535,7 +535,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth3",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -550,7 +550,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -565,7 +565,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -580,7 +580,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -595,7 +595,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -610,7 +610,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -625,7 +625,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth2",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -640,7 +640,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages6_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -655,7 +655,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages5_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -670,7 +670,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages4_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -685,7 +685,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages3_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -700,7 +700,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages2_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   },
@@ -715,7 +715,7 @@
         "expand": true,
         "dest": "tests/dest/options_countOfImages1_colorDepth1",
         "cwd": "tests/sources",
-        "src": "*.png"
+        "src": ["*.png", "*.jpg"]
       }
     ]
   }

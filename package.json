@@ -1,7 +1,7 @@
 {
   "name": "grunt-favicon",
   "description": "Generate site favicons via ImageMagick",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "homepage": "https://github.com/rodzewich/grunt-favicon",
   "author": {
     "name": "Oleg Rodzewich",
